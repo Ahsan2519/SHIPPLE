@@ -1,8 +1,6 @@
-@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -30,16 +28,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type=radio] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -50,7 +51,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,30 +69,40 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -100,55 +113,81 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 60.1%;
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+header .logo {
+  padding: 36px 0;
+  text-align: center;
+}
+header .hamburger {
+  display: block;
+  cursor: pointer;
+}
+header .bar {
+  width: 18px;
+  height: 2px;
+  margin: 5px;
+  display: none;
+  background-color: #000;
+  text-indent: -9999px;
+  transition: all 0.3s ease-in-out;
+}
+header .navber {
+  padding: 7px 0;
+  background-color: rgba(144, 153, 170, 0.5);
+}
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+}
+header .nav-link {
+  padding: 7px;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  header .nav-link.active, header .nav-link:hover {
+    color: #FFB900;
+  }
+}
+header .down {
+  padding: 7px 16px;
+  position: relative;
+}
+header .down::before {
+  content: "\f0d7";
+  float: left;
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  font-size: 7px;
+  font-family: "FontAwesome";
+}
 
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-
-
-
-
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+/*# sourceMappingURL=style.css.map */

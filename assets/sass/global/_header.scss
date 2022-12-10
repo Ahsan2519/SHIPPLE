@@ -1,0 +1,68 @@
+%flex-property {
+  @include displayFlex();
+  @include justify-content(space-between);
+}
+
+header {
+  @include position(absolute, $top: 0, $right: 0, $left: 0);
+
+  .logo {
+    padding: 36px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 18px;
+    height: 2px;
+    margin: 5px;
+    display: none;
+    background-color: $black;
+    text-indent: -9999px;
+    @include transition(all .3s ease-in-out);
+  }
+
+  .navber {
+    padding: 7px 0;
+    background-color: $nav;
+  }
+
+  .wrapper {
+    @include displayFlex();
+    @include align-items(center);
+    @include justify-content(center);
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 7px;
+    color: $white;
+    @include font(10px);
+    text-transform: uppercase;
+    @include transition(all .3s ease-in-out);
+
+    @include for-hover-only {
+
+      &.active,
+      &:hover {
+        color: $anchor-color;
+      }
+    }
+
+  }
+
+  .down {
+    padding: 7px 16px;
+    @include position(relative);
+
+    &::before {
+      @include contentBefore(\f0d7, $float: left);
+      @include position(absolute, $top: 9px, $left: 8px);
+      @include font(7px, $family: "FontAwesome");
+    }
+  }
+}
