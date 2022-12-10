@@ -190,4 +190,44 @@ header .down::before {
   font-family: "FontAwesome";
 }
 
+/*banner section start here*/
+.banner {
+  padding: 174px 0;
+  background: rgba(0, 0, 0, 0.4) url("https://plantillashtmlgratis.com/wp-content/themes/helium-child/vista_previa/page244/debut/assets/img/banner-slide-1.jpg") center no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.banner .banner-heading {
+  padding: 85px 44% 0 0;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 500;
+}
+.banner .description {
+  padding: 16px 51% 37px 0;
+  color: #fff;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+  line-height: 1.5;
+}
+.banner .btn-link {
+  padding: 8px 13px;
+  border: 1px solid transparent;
+  background-color: #9099AA;
+  color: #fff;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+@media (min-width: 995px) {
+  .banner .btn-link:hover {
+    border-color: #9099AA;
+    color: #9099AA;
+    background-color: #fff;
+  }
+}
+
+/*banner section end here*/
+
 /*# sourceMappingURL=style.css.map */

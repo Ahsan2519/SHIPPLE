@@ -1,0 +1,40 @@
+/*banner section start here*/
+.banner {
+  padding: 174px 0;
+  background: rgba(0, 0, 0, 0.4) url("https://plantillashtmlgratis.com/wp-content/themes/helium-child/vista_previa/page244/debut/assets/img/banner-slide-1.jpg") center no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  .banner-heading {
+    padding: 85px 44% 0 0;
+    color: $white;
+    @include font(38px, 500);
+  }
+
+  .description {
+    padding: 16px 51% 37px 0;
+    color: $white;
+    @include font(10px, $family: (Verdana, sans-serif));
+    line-height: 1.5;
+  }
+
+  .btn-link {
+    padding: 8px 13px;
+    border: 1px solid transparent;
+    background-color: $btn-color;
+    color: $white;
+    @include font(10px, $family: (Verdana, sans-serif));
+    @include transition(all .3s ease-in-out);
+    text-transform: uppercase;
+
+    @include for-hover-only {
+      &:hover {
+        border-color: $btn-color;
+        color: $btn-color;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+/*banner section end here*/
