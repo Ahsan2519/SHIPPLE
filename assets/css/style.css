@@ -317,6 +317,7 @@ header .down::before {
 }
 
 /*two column section end here*/
+/* feature section start here*/
 .feature {
   padding: 54px 0 56px;
   background: rgba(0, 0, 0, 0.5) url("https://images.immediate.co.uk/production/volatile/sites/4/2009/09/GettyImages-884671854-4946bb3.jpg?quality=90&webp=true&resize=940,400") no-repeat center;
@@ -441,6 +442,9 @@ header .down::before {
   font-size: 11px;
   line-height: 1.6;
 }
+.info .icon-list {
+  padding-top: 16px;
+}
 .info .icons {
   margin-left: 14px;
   position: relative;
@@ -482,7 +486,7 @@ header .down::before {
   color: #474747;
 }
 .info .info-btn {
-  padding-top: 21px;
+  padding-top: 25px;
 }
 .info .view-btn {
   font-size: 10px;
