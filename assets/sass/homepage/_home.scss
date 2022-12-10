@@ -228,3 +228,85 @@
 }
 
 /* team section end here*/
+
+/*info section start here*/
+.info {
+  padding: 53px 0;
+
+  .column-span {
+    padding-bottom: 74px;
+  }
+
+  .info-list {
+    @extend %flex-property;
+  }
+
+  .info-item {
+    padding: 20px 2.8% 22px 2.8%;
+    @include flex-basis(30.8%);
+    @include boxShadow(0px 0px 15px rgb(0 0 0 / 10%));
+  }
+
+  .info-heading {
+    padding-bottom: 13px;
+    color: #9099aa;
+    @include font(14px);
+  }
+
+  .info-description {
+    color: #474744;
+    @include font(11px);
+    line-height: 1.6;
+  }
+
+  .icon-list {
+    @extend %flex-property;
+  }
+
+  .icons {
+    margin-left: 14px;
+    @include position(relative);
+    color: #9099aa;
+    @include font(8px);
+
+    &::before {
+      @include contentBefore('', $float: left);
+      @include position(absolute, $top: 0, $left: -14px);
+      color: #474747;
+      @include font(8px, $family: "FontAwesome");
+    }
+
+    @each $iname ,
+    $ivalue in $info-icons {
+      &.#{$iname}::before {
+        content: $ivalue;
+      }
+    }
+  }
+
+  .person::after,
+  .category::after {
+    @include contentBefore('|', $float: left);
+    @include position(absolute, $top: 0, $right: -9px);
+  }
+
+  .category {
+    margin-left: 14px;
+  }
+
+  .date {
+    margin-right: 7px;
+    color: #474747;
+  }
+
+  .info-btn {
+    padding-top: 21px
+  }
+
+  .view-btn {
+    @include font(10px);
+  }
+}
+
+/*info section end here*/
+

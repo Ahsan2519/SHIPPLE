@@ -124,7 +124,7 @@ li {
   margin: 0;
 }
 
-.team .team-list, .feature .feature-list, .two-column .column-item {
+.info .icon-list, .info .info-list, .team .team-list, .feature .feature-list, .two-column .column-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,5 +417,77 @@ header .down::before {
 }
 
 /* team section end here*/
+/*info section start here*/
+.info {
+  padding: 53px 0;
+}
+.info .column-span {
+  padding-bottom: 74px;
+}
+.info .info-item {
+  padding: 20px 2.8% 22px 2.8%;
+  -ms-flex-preferred-size: 30.8%;
+  flex-basis: 30.8%;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.info .info-heading {
+  padding-bottom: 13px;
+  color: #9099aa;
+  font-size: 14px;
+}
+.info .info-description {
+  color: #474744;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.info .icons {
+  margin-left: 14px;
+  position: relative;
+  color: #9099aa;
+  font-size: 8px;
+}
+.info .icons::before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -14px;
+  color: #474747;
+  font-size: 8px;
+  font-family: "FontAwesome";
+}
+.info .icons.person::before {
+  content: "\f007";
+}
+.info .icons.category::before {
+  content: "\f02c";
+}
+.info .icons.date::before {
+  content: "\f073";
+}
+.info .person::after,
+.info .category::after {
+  content: "|";
+  float: left;
+  position: absolute;
+  top: 0;
+  right: -9px;
+}
+.info .category {
+  margin-left: 14px;
+}
+.info .date {
+  margin-right: 7px;
+  color: #474747;
+}
+.info .info-btn {
+  padding-top: 21px;
+}
+.info .view-btn {
+  font-size: 10px;
+}
+
+/*info section end here*/
 
 /*# sourceMappingURL=style.css.map */
