@@ -1,0 +1,214 @@
+/* footer start here */
+footer {
+  background-color: $footer;
+
+  .upper-footer {
+    padding: 57px 0 36px;
+    border-bottom: 1px solid #ffffff1a;
+
+    .footer-logo {
+      text-align: center;
+    }
+
+    .footer-logo-link {
+      margin-bottom: 16px;
+      color: $white;
+      @include font(21px, $family: ('Times New Roman', Times, serif));
+      text-transform: uppercase;
+    }
+
+    .social-list {
+      @include displayFlex();
+      @include justify-content(center);
+    }
+
+    .icon {
+      text-indent: -9999px;
+
+      @include for-hover-only {
+        &:hover::before {
+          color: $anchor-color;
+        }
+      }
+
+      &::before {
+        @include contentBefore("", 26px, 26px, $float: left);
+        border: 1px solid #29313F;
+        margin-bottom: 22px;
+        @include displayFlex();
+        @include align-items(center);
+        @include justify-content(center);
+        background-color: #29313F;
+        color: #9399A7;
+        @include font(14px, $family: "FontAwesome");
+        text-indent: 0;
+        @include transition(all, .3s, ease-in-out);
+      }
+
+      @each $FA-icons,
+      $content in $social-icon {
+        &.#{$FA-icons}::before {
+          @include contentBefore($content);
+        }
+      }
+    }
+
+    .footer-span {
+      display: block;
+      color: $footer-anc;
+      @include font(10px, $family: Verdana);
+      text-align: center;
+    }
+  }
+
+  .footer-bottom {
+    padding: 38px 0 52px;
+
+    .footer-list {
+      @extend %flex-property;
+    }
+
+    .footer-heading {
+      margin-bottom: 30px;
+      color: $white;
+      @include font($family: ('Times New Roman', Times, serif));
+    }
+
+    .footer-item {
+      @include flex-basis(22%);
+    }
+
+    .contact-list {
+      @include displayFlex();
+      @include flex-direction(column);
+    }
+
+    .contact-link {
+      margin-left: 16%;
+      @include position(relative);
+      color: $footer-anc;
+      @include font(12px);
+      @include transition(all, .3s, ease-in-out);
+
+      @include for-hover-only {
+        &:hover {
+          color: $anchor-color;
+        }
+      }
+
+      &::before {
+        @include contentBefore("", $float: left);
+        @include position(absolute, $top: 0, $left: -29px);
+        @include font($family: "FontAwesome");
+      }
+
+      @each $icon-name,
+      $icon-value in $contact-icons {
+        &.#{$icon-name}::before {
+          @include contentBefore($icon-value);
+        }
+      }
+    }
+
+    .time,
+    .other,
+    .location {
+      @include for-hover-only {
+        pointer-events: none;
+      }
+    }
+
+    .contact-item,
+    .present-item {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #ffffff1a;
+    }
+
+    .contact-item:last-child,
+    .present-item:last-child {
+      border: none;
+    }
+
+    .other {
+      display: block;
+    }
+
+    .location,
+    .time {
+      line-height: 1.4;
+    }
+
+    .present-link {
+      color: #9099aa;
+      @include font(12px);
+      @include transition(all, .3s, ease-in-out);
+
+      @include for-hover-only {
+        &:hover {
+          color: $anchor-color;
+        }
+      }
+    }
+
+    .upper-item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ffffff1a;
+    }
+
+    .item-description,
+    .item-span {
+      color: #9099aa;
+      @include font(11px);
+      line-height: 1.5;
+    }
+
+    .item-span {
+      padding: 11px 0;
+      display: block;
+      color: $footer-anc;
+    }
+
+    .gallery-item {
+      margin: 0 1px 8px;
+    }
+
+    .image-link {
+      @include transition(all, .3s, ease-in-out);
+
+      @include for-hover-only {
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  .copy-right {
+    padding: 17px 0 115px;
+    background-color: #2c3541;
+
+    .wrapper {
+      @extend%flex-property;
+    }
+
+    .copy,
+    .copy-span,
+    .design {
+      color: #5F6F89;
+      @include font(10px, $family: Verdana);
+    }
+
+    .design {
+      @include transition(all, .3s, ease-in-out);
+
+      @include for-hover-only {
+        &:hover {
+          color: $anchor-color;
+        }
+      }
+    }
+  }
+}
+
+/* footer end here */

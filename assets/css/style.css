@@ -124,7 +124,7 @@ li {
   margin: 0;
 }
 
-.info .icon-list, .info .info-list, .team .team-list, .feature .feature-list, .two-column .column-item {
+footer .copy-right .wrapper, footer .footer-bottom .footer-list, .info .icon-list, .info .info-list, .team .team-list, .feature .feature-list, .two-column .column-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,5 +551,269 @@ header .down::before {
 }
 
 /*contact section end here*/
+/* scroll to top start her*/
+.container {
+  position: relative;
+}
+
+.scroll-up {
+  position: absolute;
+  right: 1%;
+  bottom: 0.5%;
+}
+
+.scroll-too {
+  display: block;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.scroll-too::before {
+  content: "\f077";
+  width: 27px;
+  height: 27px;
+  float: left;
+  border: 1px solid #5E6776;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #5E6776;
+  color: #9198A3;
+  font-size: 14px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+.scroll-too:hover::before {
+  border-color: #9099AA;
+  background-color: #fff;
+  color: #9099AA;
+}
+
+/* scroll to top end her*/
+/* footer start here */
+footer {
+  background-color: #3F4A5C;
+}
+footer .upper-footer {
+  padding: 57px 0 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+}
+footer .upper-footer .footer-logo {
+  text-align: center;
+}
+footer .upper-footer .footer-logo-link {
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 21px;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+footer .upper-footer .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+footer .upper-footer .icon {
+  text-indent: -9999px;
+}
+@media (min-width: 995px) {
+  footer .upper-footer .icon:hover::before {
+    color: #FFB900;
+  }
+}
+footer .upper-footer .icon::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  float: left;
+  border: 1px solid #29313F;
+  margin-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #29313F;
+  color: #9399A7;
+  font-size: 14px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+  transition: all 0.3s ease-in-out;
+}
+footer .upper-footer .icon.dribble::before {
+  content: "\f17d";
+}
+footer .upper-footer .icon.facebook::before {
+  content: "\f09a";
+}
+footer .upper-footer .icon.google::before {
+  content: "\f0d5";
+}
+footer .upper-footer .icon.linkedin::before {
+  content: "\f08c";
+}
+footer .upper-footer .icon.twitter::before {
+  content: "\f099";
+}
+footer .upper-footer .icon.vk::before {
+  content: "\f189";
+}
+footer .upper-footer .footer-span {
+  display: block;
+  color: #dfdfdf;
+  font-size: 10px;
+  font-family: Verdana;
+  text-align: center;
+}
+footer .footer-bottom {
+  padding: 38px 0 52px;
+}
+footer .footer-bottom .footer-heading {
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+footer .footer-bottom .footer-item {
+  -ms-flex-preferred-size: 22%;
+  flex-basis: 22%;
+}
+footer .footer-bottom .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  flex-direction: column;
+}
+footer .footer-bottom .contact-link {
+  margin-left: 16%;
+  position: relative;
+  color: #dfdfdf;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  footer .footer-bottom .contact-link:hover {
+    color: #FFB900;
+  }
+}
+footer .footer-bottom .contact-link::before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -29px;
+  font-family: "FontAwesome";
+}
+footer .footer-bottom .contact-link.location::before {
+  content: "\f3c5";
+}
+footer .footer-bottom .contact-link.call::before {
+  content: "\f879";
+}
+footer .footer-bottom .contact-link.email::before {
+  content: "\f0e0";
+}
+footer .footer-bottom .contact-link.time::before {
+  content: "\f017";
+}
+@media (min-width: 995px) {
+  footer .footer-bottom .time,
+  footer .footer-bottom .other,
+  footer .footer-bottom .location {
+    pointer-events: none;
+  }
+}
+footer .footer-bottom .contact-item,
+footer .footer-bottom .present-item {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+}
+footer .footer-bottom .contact-item:last-child,
+footer .footer-bottom .present-item:last-child {
+  border: none;
+}
+footer .footer-bottom .other {
+  display: block;
+}
+footer .footer-bottom .location,
+footer .footer-bottom .time {
+  line-height: 1.4;
+}
+footer .footer-bottom .present-link {
+  color: #9099aa;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  footer .footer-bottom .present-link:hover {
+    color: #FFB900;
+  }
+}
+footer .footer-bottom .upper-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+}
+footer .footer-bottom .item-description,
+footer .footer-bottom .item-span {
+  color: #9099aa;
+  font-size: 11px;
+  line-height: 1.5;
+}
+footer .footer-bottom .item-span {
+  padding: 11px 0;
+  display: block;
+  color: #dfdfdf;
+}
+footer .footer-bottom .gallery-item {
+  margin: 0 1px 8px;
+}
+footer .footer-bottom .image-link {
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  footer .footer-bottom .image-link:hover {
+    opacity: 0.7;
+  }
+}
+footer .copy-right {
+  padding: 17px 0 115px;
+  background-color: #2c3541;
+}
+footer .copy-right .copy,
+footer .copy-right .copy-span,
+footer .copy-right .design {
+  color: #5F6F89;
+  font-size: 10px;
+  font-family: Verdana;
+}
+footer .copy-right .design {
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  footer .copy-right .design:hover {
+    color: #FFB900;
+  }
+}
+
+/* footer end here */
 
 /*# sourceMappingURL=style.css.map */

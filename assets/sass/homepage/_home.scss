@@ -377,3 +377,40 @@
 }
 
 /*contact section end here*/
+
+/* scroll to top start her*/
+.container {
+  @include position(relative);
+}
+
+.scroll-up {
+  @include position(absolute, $right: 1%, $bottom: .5%);
+}
+
+.scroll-too {
+  display: block;
+  text-indent: -9999px;
+  cursor: pointer;
+
+  &::before {
+    @include contentBefore('\f077', 27px, 27px, $float: left);
+    border: 1px solid #5E6776;
+    @include displayFlex();
+    @include align-items(center);
+    @include justify-content(center);
+    background-color: #5E6776;
+    color: #9198A3;
+    @include font(14px, $family: "FontAwesome");
+    text-indent: 0;
+  }
+
+  @include transition(all .3s ease-in-out);
+
+  &:hover::before {
+    border-color: $btn-color;
+    background-color: $white;
+    color: $btn-color;
+  }
+}
+
+/* scroll to top end her*/
