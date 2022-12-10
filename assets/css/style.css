@@ -124,7 +124,7 @@ li {
   margin: 0;
 }
 
-.feature .feature-list, .two-column .column-item {
+.team .team-list, .feature .feature-list, .two-column .column-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,5 +385,37 @@ header .down::before {
 }
 
 /* feature section end here*/
+/* team section start here*/
+.team {
+  padding: 57px 0;
+  background-color: #efefef;
+}
+.team .team-item {
+  -ms-flex-preferred-size: 22.2%;
+  flex-basis: 22.2%;
+  background-color: #efefef;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.team .team-item figure {
+  padding: 22px 12.9% 19px 12.9%;
+}
+.team .team-item figure img {
+  border-radius: 50%;
+}
+.team .team-item .caption {
+  padding-top: 23px;
+}
+.team .title {
+  font-size: 15px;
+  text-align: center;
+}
+.team .job {
+  display: block;
+  font-size: 9px;
+  text-align: center;
+}
+
+/* team section end here*/
 
 /*# sourceMappingURL=style.css.map */

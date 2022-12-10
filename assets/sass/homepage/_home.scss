@@ -186,3 +186,45 @@
 }
 
 /* feature section end here*/
+
+/* team section start here*/
+.team {
+  padding: 57px 0;
+  background-color: #efefef;
+
+  .team-list {
+    @extend %flex-property;
+  }
+
+  .team-item {
+    @include flex-basis(22.2%);
+    background-color: #efefef;
+    @include boxShadow(0px 0px 15px rgb(0 0 0 / 10%));
+
+    figure {
+      padding: 22px 12.9% 19px 12.9%;
+
+      img {
+        border-radius: 50%;
+      }
+
+    }
+
+    .caption {
+      padding-top: 23px;
+    }
+  }
+
+  .title {
+    @include font(15px);
+    text-align: center;
+  }
+
+  .job {
+    display: block;
+    @include font(9px);
+    text-align: center;
+  }
+}
+
+/* team section end here*/
