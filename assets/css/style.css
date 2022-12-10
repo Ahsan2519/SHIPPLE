@@ -124,7 +124,7 @@ li {
   margin: 0;
 }
 
-.two-column .column-item {
+.feature .feature-list, .two-column .column-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,5 +317,73 @@ header .down::before {
 }
 
 /*two column section end here*/
+.feature {
+  padding: 54px 0 56px;
+  background: rgba(0, 0, 0, 0.5) url("https://images.immediate.co.uk/production/volatile/sites/4/2009/09/GettyImages-884671854-4946bb3.jpg?quality=90&webp=true&resize=940,400") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #fff;
+}
+.feature .heading,
+.feature .column-span {
+  color: #fff;
+}
+.feature .feature-list {
+  padding-top: 74px;
+}
+.feature .feature-item {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+.feature .feature-heading {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+}
+.feature .feature-heading::before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 60px;
+  font-family: "FontAwesome";
+  -webkit-transform: translate(-50%, -143%);
+  -ms-transform: translate(-50%, -143%);
+  transform: translate(-50%, -143%);
+}
+.feature .feature-heading.hand::before {
+  content: "\f4c4";
+}
+.feature .feature-heading.diamond::before {
+  content: "\f3a5";
+}
+.feature .feature-heading.ball::before {
+  content: "\f45f";
+}
+.feature .feature-description {
+  padding: 13px 0 20px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.4;
+}
+.feature .feature-btn {
+  text-align: center;
+}
+.feature .view-btn {
+  border: 1px solid #fff;
+  background-color: #1d2f3d;
+  font-size: 10px;
+  opacity: 0.9;
+}
+@media (min-width: 995px) {
+  .feature .view-btn:hover {
+    border-color: #8993A4;
+    background-color: #8993A4;
+    color: #fff;
+  }
+}
+
+/* feature section end here*/
 
 /*# sourceMappingURL=style.css.map */

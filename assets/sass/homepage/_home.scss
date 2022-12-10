@@ -117,3 +117,72 @@
 }
 
 /*two column section end here*/
+.feature {
+  padding: 54px 0 56px;
+  background: rgba(0, 0, 0, 0.5) url("https://images.immediate.co.uk/production/volatile/sites/4/2009/09/GettyImages-884671854-4946bb3.jpg?quality=90&webp=true&resize=940,400")no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: $white;
+
+  .heading,
+  .column-span {
+    color: $white;
+  }
+
+  .feature-list {
+    padding-top: 74px;
+    @extend %flex-property;
+  }
+
+  .feature-item {
+    @include flex-basis(30%)
+  }
+
+  .feature-heading {
+    @include position(relative);
+    @include font(14px);
+    text-align: center;
+
+    &::before {
+      @include contentBefore("", $float: left);
+      @include position(absolute, $top: 50%, $left: 50%);
+      @include font(60px, $family: "FontAwesome");
+      @include transform(translate(-50%, -143%))
+    }
+
+    @each $name,
+    $value in $feature-icon {
+      &.#{$name}::before {
+        @include contentBefore($value);
+      }
+    }
+  }
+
+  .feature-description {
+    padding: 13px 0 20px;
+    @include font(11px);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .feature-btn {
+    text-align: center;
+  }
+
+  .view-btn {
+    border: 1px solid $white;
+    background-color: #1d2f3d;
+    @include font(10px);
+    opacity: 0.9;
+
+    @include for-hover-only {
+      &:hover {
+        border-color: #8993A4;
+        background-color: #8993A4;
+        color: $white;
+      }
+    }
+  }
+}
+
+/* feature section end here*/
