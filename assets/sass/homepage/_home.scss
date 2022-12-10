@@ -310,3 +310,71 @@
 
 /*info section end here*/
 
+/*contact section start here*/
+.contact {
+  padding: 21px 0;
+  background: url("https://images.unsplash.com/photo-1603346996604-cd77fc859e1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")no-repeat center;
+  background-size: cover;
+
+  .wrapper {
+    padding: 22px 1.5% 20px 1.5%;
+    width: 30%;
+    background-color: rgba(255, 255, 255, .8);
+    ;
+  }
+
+  .contact-heading {
+    color: $heading;
+    @include font(14px);
+    text-align: center;
+  }
+
+  .contact-span {
+    padding: 16px 0 23px;
+    display: block;
+    color: $heading;
+    @include font(10px, $family: Verdana);
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .input-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    padding: 6px 3.7%;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    @include font(11px);
+    outline: none;
+  }
+
+  .form-ctrl {
+    text-align: center;
+  }
+
+  .sub-btn {
+    padding: 6px 3.4%;
+    border: 1px solid $btn-color;
+    background-color: $btn-color;
+    color: $white;
+    @include font(11px);
+    outline: none;
+    text-transform: uppercase;
+    @include transition(all .3s ease-in-out);
+
+    @include for-hover-only {
+      &:hover {
+        border-color: $btn-color;
+        background-color: $white;
+        color: $btn-color;
+      }
+    }
+  }
+
+}
+
+/*contact section end here*/
+

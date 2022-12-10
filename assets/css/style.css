@@ -489,5 +489,63 @@ header .down::before {
 }
 
 /*info section end here*/
+/*contact section start here*/
+.contact {
+  padding: 21px 0;
+  background: url("https://images.unsplash.com/photo-1603346996604-cd77fc859e1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80") no-repeat center;
+  background-size: cover;
+}
+.contact .wrapper {
+  padding: 22px 1.5% 20px 1.5%;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.contact .contact-heading {
+  color: #474747;
+  font-size: 14px;
+  text-align: center;
+}
+.contact .contact-span {
+  padding: 16px 0 23px;
+  display: block;
+  color: #474747;
+  font-size: 10px;
+  font-family: Verdana;
+  line-height: 1.4;
+  text-align: center;
+}
+.contact .input-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact .input {
+  padding: 6px 3.7%;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  font-size: 11px;
+  outline: none;
+}
+.contact .form-ctrl {
+  text-align: center;
+}
+.contact .sub-btn {
+  padding: 6px 3.4%;
+  border: 1px solid #9099AA;
+  background-color: #9099AA;
+  color: #fff;
+  font-size: 11px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 995px) {
+  .contact .sub-btn:hover {
+    border-color: #9099AA;
+    background-color: #fff;
+    color: #9099AA;
+  }
+}
+
+/*contact section end here*/
 
 /*# sourceMappingURL=style.css.map */
