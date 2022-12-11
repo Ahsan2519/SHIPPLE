@@ -5,10 +5,22 @@
   background-size: cover;
   background-blend-mode: overlay;
 
+  @include for-mobile-screen {
+    padding: 127px 0;
+  }
+
+  @include for-small-screen {
+    padding: 100px 0 80px;
+  }
+
   .banner-heading {
     padding: 85px 44% 0 0;
     color: $white;
     @include font(38px, 500);
+
+    @include for-mobile-screen {
+      padding: 40px 44% 0 0;
+    }
   }
 
   .description {
@@ -16,6 +28,10 @@
     color: $white;
     @include font(10px, $family: (Verdana, sans-serif));
     line-height: 1.5;
+
+    @include for-small-screen {
+      padding: 16px 0 37px 0;
+    }
   }
 
   .btn-link {
@@ -44,11 +60,24 @@
 
   @at-root {
     .heading {
-      padding: 0 24%;
+      padding: 0 21%;
       color: $heading;
       @include font(30px, 600);
       line-height: 1.2;
       text-align: center;
+
+      @include for-medium-screen {
+        @include font(27px);
+      }
+
+      @include for-mobile-screen {
+        padding: 0 14%;
+        @include font(20px);
+      }
+
+      @include for-small-screen {
+        padding: 0;
+      }
     }
 
     .column-span {
@@ -56,6 +85,14 @@
       display: block;
       text-align: center;
       @include font(12px);
+
+      @include for-large-screen {
+        padding-bottom: 60px;
+      }
+
+      @include for-medium-screen {
+        padding-bottom: 50px;
+      }
     }
   }
 
@@ -67,19 +104,40 @@
   .column-item {
     margin-bottom: 35px;
     @extend %flex-property;
+
+    @include for-mobile-screen {
+      @include flex-direction(column);
+    }
   }
 
   .column-item:nth-child(2) {
     @include flex-direction(row-reverse);
+
+    @include for-mobile-screen {
+      @include flex-direction(column);
+    }
   }
 
   .content {
     padding: 37px 0 51px;
     @include flex(0, 0, 45.9%);
+
+    @include for-medium-screen {
+      padding: 6px 0px;
+
+      @include for-medium-screen {
+        @include flex(0, 0, 38.9%);
+        padding: 15px 0px;
+      }
+    }
   }
 
   figure {
-    @include flex(0, 0, 50.1%)
+    @include flex(0, 0, 50.1%);
+
+    @include for-medium-screen {
+      @include flex(0, 0, 55.1%);
+    }
   }
 
   .content-heading {
@@ -124,6 +182,10 @@
   background-blend-mode: overlay;
   color: $white;
 
+  @include for-mobile-screen {
+    padding: 54px 0 0 0;
+  }
+
   .heading,
   .column-span {
     color: $white;
@@ -132,10 +194,18 @@
   .feature-list {
     padding-top: 74px;
     @extend %flex-property;
+
+    @include for-mobile-screen {
+      @include flex-direction(column);
+    }
   }
 
   .feature-item {
-    @include flex-basis(30%)
+    @include flex-basis(30%);
+
+    @include for-mobile-screen {
+      margin-bottom: 130px;
+    }
   }
 
   .feature-heading {
@@ -192,14 +262,26 @@
   padding: 57px 0;
   background-color: #efefef;
 
+  @include for-small-screen {
+    padding: 53px 0 40px;
+  }
+
   .team-list {
     @extend %flex-property;
+
+    @include for-mobile-screen {
+      @include flex-direction(column);
+    }
   }
 
   .team-item {
     @include flex-basis(22.2%);
     background-color: #efefef;
     @include boxShadow(0px 0px 15px rgb(0 0 0 / 10%));
+
+    @include for-mobile-screen {
+      margin-bottom: 30px;
+    }
 
     figure {
       padding: 22px 12.9% 19px 12.9%;
@@ -232,18 +314,39 @@
 .info {
   padding: 53px 0;
 
+  @include for-mobile-screen {
+    padding: 53px 0 30px;
+  }
+
   .column-span {
     padding-bottom: 74px;
+
+    @include for-large-screen {
+      padding-bottom: 60px;
+    }
   }
 
   .info-list {
     @extend %flex-property;
+
+    @include for-medium-screen {
+      @include flex-wrap(wrap);
+    }
+
+    @include for-mobile-screen {
+      @include flex-direction(column);
+    }
   }
 
   .info-item {
     padding: 20px 2.8% 22px 2.8%;
     @include flex-basis(30.8%);
     @include boxShadow(0px 0px 15px rgb(0 0 0 / 10%));
+
+    @include for-medium-screen {
+      margin-bottom: 30px;
+      @include flex-basis(46.8%);
+    }
   }
 
   .info-heading {
@@ -282,12 +385,40 @@
         content: $ivalue;
       }
     }
+
+    @include for-extra-large-screen {
+      &::before {
+        @include position($left: -12px);
+      }
+    }
+
+    @include for-medium-screen {
+      @include flex-basis(19%);
+    }
+
+    @include for-small-screen {
+      @include flex-basis(20%);
+    }
   }
 
   .person::after,
   .category::after {
     @include contentBefore('|', $float: left);
     @include position(absolute, $top: 0, $right: -9px);
+
+    @include for-extra-large-screen {
+      & {
+        @include position($right: -5px);
+      }
+    }
+
+    @include for-medium-screen {
+      & {
+        @include position($right: -14px);
+        @include transform(translate(-50%, 0));
+      }
+    }
+
   }
 
   .category {
@@ -316,11 +447,31 @@
   background: url("https://images.unsplash.com/photo-1603346996604-cd77fc859e1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")no-repeat center;
   background-size: cover;
 
+  @include for-large-screen {
+    padding: 40px 0;
+  }
+
   .wrapper {
-    padding: 22px 1.5% 20px 1.5%;
     width: 30%;
+    padding: 22px 1.5% 20px 1.5%;
     background-color: rgba(255, 255, 255, .8);
-    ;
+
+    @include for-large-screen {
+      width: 40%;
+      padding: 30px 2.5% 30px 2.5%;
+    }
+
+    @include for-medium-screen {
+      width: 50%;
+    }
+
+    @include for-mobile-screen {
+      width: 70%;
+    }
+
+    @include for-small-screen {
+      width: 85%;
+    }
   }
 
   .contact-heading {
@@ -384,7 +535,16 @@
 }
 
 .scroll-up {
-  @include position(absolute, $right: 1%, $bottom: .5%);
+  display: none;
+  @include position(fixed, $right: 1%, $bottom: .5%);
+
+  &.scroll-show {
+    display: block;
+  }
+
+  @include for-small-screen {
+    @include position($right: 2%);
+  }
 }
 
 .scroll-too {
@@ -404,13 +564,19 @@
     text-indent: 0;
   }
 
-  @include transition(all .3s ease-in-out);
+  @include for-hover-only {
+    @include transition(all .3s ease-in-out);
 
-  &:hover::before {
-    border-color: $btn-color;
-    background-color: $white;
-    color: $btn-color;
+    &:hover::before {
+      border-color: $btn-color;
+      background-color: $white;
+      color: $btn-color;
+    }
   }
+}
+
+html.hidden {
+  overflow-y: hidden;
 }
 
 /* scroll to top end her*/

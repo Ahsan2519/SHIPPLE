@@ -110,3 +110,16 @@ li {
   padding: 0;
   margin: 0;
 }
+
+@include for-large-screen{
+  .wrapper{
+    width: 70%;
+  }
+  
+}
+@include for-medium-screen{
+  .wrapper{
+    width: 80%;
+  }
+  
+}

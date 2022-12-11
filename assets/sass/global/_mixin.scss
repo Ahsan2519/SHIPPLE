@@ -185,6 +185,10 @@
 @mixin for-hover-only {
   @media (min-width: 995px) { @content; }
 }
+// mixin for extraLarge screen
+@mixin for-extra-large-screen{
+  @media (max-width:1280px){ @content; } 
+}
 // mixin for Large screen
 @mixin for-large-screen{
   @media (max-width:1200px){ @content; } 
