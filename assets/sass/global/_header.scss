@@ -82,6 +82,7 @@ header {
     gap: 10px;
 
     @include for-mobile-screen {
+      padding: 62px 0;
       @include flex-direction(column);
       gap: 25px;
     }

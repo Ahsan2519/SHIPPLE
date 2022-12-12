@@ -238,6 +238,7 @@ header .wrapper {
 }
 @media (max-width: 768px) {
   header .wrapper {
+    padding: 62px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1067,6 +1068,11 @@ footer .footer-bottom .contact-link.email::before {
 }
 footer .footer-bottom .contact-link.time::before {
   content: "\f017";
+}
+@media (max-width: 480px) {
+  footer .footer-bottom .contact-link {
+    margin-left: 8%;
+  }
 }
 @media (min-width: 995px) {
   footer .footer-bottom .time,
