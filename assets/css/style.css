@@ -1161,13 +1161,15 @@ footer .footer-bottom .gallery-item {
   flex-basis: 30%;
   margin: 0 3% 8px 0;
 }
+footer .footer-bottom .gallery-item:hover {
+  opacity: 0.7;
+}
 footer .footer-bottom .image-link {
+  height: 100%;
   transition: all 0.3s ease-in-out;
 }
-@media (min-width: 995px) {
-  footer .footer-bottom .image-link:hover {
-    opacity: 0.7;
-  }
+footer .footer-bottom .image-link img {
+  height: 100%;
 }
 @media (max-width: 995px) {
   footer .footer-bottom .image-link {
