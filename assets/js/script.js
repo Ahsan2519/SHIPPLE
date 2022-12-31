@@ -7,6 +7,8 @@ const hamburger = document.querySelector(".hamburger"),
   email = document.querySelector(".email"),
   nameRegex = /^[A-Za-z\s]+$/,
   emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/,
+  footerWrapper = document.querySelector("footer .wrapper"),
+  galleryItem = document.querySelectorAll(".gallery-item"),
   scrollUp = document.querySelector(".scroll-up");
 let isvalid;
 // global variable declaration end here
@@ -85,13 +87,13 @@ form.addEventListener("submit", (e) => {
   if (isvalid == true) {
     const sendMsg = document.createElement("span");
     sendMsg.className = "send-msg";
-    sendMsg.innerText="Your message hasbeen sent succesfully..Thank you..!"
+    sendMsg.innerText = "Your message hasbeen sent succesfully..Thank you..!"
     form.insertBefore(sendMsg, form.children[0]);
-    setTimeout(()=>{
+    setTimeout(() => {
       sendMsg.remove()
-    },3000);
+    }, 3000);
     form.reset();
-    activeInputGroup.forEach(element=>{
+    activeInputGroup.forEach(element => {
       element.classList.remove("succes");
     });
   }
@@ -108,3 +110,48 @@ email.addEventListener("blur", () => {
 // event for input end here
 
 // Form Validation end here
+
+// footer Gallery Modal start here
+galleryItem.forEach((modalElement, idx) => {
+  modalElement.addEventListener("click", () => {
+    const image = document.querySelectorAll(".image-link img"),
+      imageSrc = image[idx].src,
+      modalDiv = document.createElement("div");
+    modalDiv.className = "modal";
+    modalDiv.innerHTML = `<div class="modal-content">
+    <div class="modal-close">
+    <span class="modal-bar rotate1">bar</span>
+    <span class="modal-bar hide">bar</span>
+    <span class="modal-bar rotate2">bar</span>
+    </div>
+    <figure class="modal-figure">
+      <img src="${imageSrc}" alt="Modal Image">
+    </figure>
+</div>`;
+    footerWrapper.appendChild(modalDiv);
+    html.classList.add("hidden");
+    const modal = document.querySelector(".modal"),
+      modalContent = document.querySelector(".modal-content"),
+      modalClose = document.querySelector(".modal-close");
+    function removeModal() {
+      modalDiv.remove();
+      html.classList.remove("hidden");
+    }
+    modalClose.addEventListener("click", function () {
+      removeModal();
+    });
+    modal.addEventListener("click", function (e) {
+      if (e.target == modal) {
+        removeModal();
+      };
+    });
+    window.addEventListener("keydown", function (e) {
+      if (e.key == "Escape") {
+        removeModal();
+      };
+    });
+
+  });
+});
+// footer Gallery Modal end here
+
