@@ -181,6 +181,12 @@
   -webkit-box-shadow:($value1,$value2);
   box-shadow: ($value1,$value2);
 }
+
+// mixin for animation 
+@mixin animation($name:null,$time:null,$timingFun:null){
+  -webkit-animation:$name $time $timingFun;
+        animation:$name $time $timingFun;
+}
 // mixin for hover
 @mixin for-hover-only {
   @media (min-width: 995px) { @content; }
