@@ -808,9 +808,34 @@ header .down::before {
   line-height: 1.4;
   text-align: center;
 }
+.contact .my-form {
+  position: relative;
+}
+.contact .send-msg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 600;
+}
 .contact .input-group {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.contact .input-group.fail .input {
+  border-color: #f01a07;
+}
+.contact .input-group.succes .input {
+  border-color: #70bb70;
+}
+.contact .error {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-size: 12px;
+  color: #f01a07;
 }
 .contact .input {
   padding: 6px 3.7%;
