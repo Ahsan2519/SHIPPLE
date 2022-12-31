@@ -38,13 +38,12 @@ window.addEventListener("scroll", () => {
 // Form Validation Start here
 
 // function for creating error span start here
-const creatdError = (input, errorMsg) => {
+const creatError = (input, errorMsg) => {
   const inputGroup = input.parentElement,
     error = document.createElement("span");
   error.className = "error";
   error.innerText = errorMsg;
   inputGroup.appendChild(error);
-  inputGroup.classList.add("fail");
 };
 // function for creating error span end here
 
@@ -58,15 +57,15 @@ const validate = (input, regex, minChar, maxChar) => {
     activeError.remove();
   }
   if (!str) {
-    creatdError(input, "*field is required");
+    creatError(input, "*field is required");
     inputGroup.classList.add("fail");
     return isvalid = false;
   } else if ((str.length < minChar) || (str.length > maxChar)) {
-    creatdError(input, `*it must be between  ${minChar} to ${maxChar} character`);
+    creatError(input, `*it must be between  ${minChar} to ${maxChar} character`);
     inputGroup.classList.add("fail");
     return isvalid = false;
   } else if (!regex.test(str)) {
-    creatdError(input, `*please enter a valid ${input.name}`);
+    creatError(input, `*please enter a valid ${input.name}`);
     inputGroup.classList.add("fail");
     return isvalid = false;
   } else {
@@ -79,6 +78,7 @@ const validate = (input, regex, minChar, maxChar) => {
 
 // event for form start here
 form.addEventListener("submit", (e) => {
+  const activeInputGroup = document.querySelectorAll(".succes");
   e.preventDefault();
   validate(inputName, nameRegex, 4, 40);
   validate(email, emailRegex, 4, 40);
@@ -89,8 +89,11 @@ form.addEventListener("submit", (e) => {
     form.insertBefore(sendMsg, form.children[0]);
     setTimeout(()=>{
       sendMsg.remove()
-    },3000)
+    },3000);
     form.reset();
+    activeInputGroup.forEach(element=>{
+      element.classList.remove("succes");
+    });
   }
 });
 // event for form end here
@@ -103,3 +106,5 @@ email.addEventListener("blur", () => {
   validate(email, emailRegex, 4, 40);
 });
 // event for input end here
+
+// Form Validation end here
