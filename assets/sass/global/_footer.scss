@@ -198,15 +198,16 @@ footer {
     .gallery-item {
       @include flex-basis(30%);
       margin: 0 3% 8px 0;
+      &:hover{
+        opacity: .7;
+      }
     }
 
     .image-link {
+      height: 100%;
       @include transition(all, .3s, ease-in-out);
-
-      @include for-hover-only {
-        &:hover {
-          opacity: .7;
-        }
+      img{
+        height: 100%;
       }
 
       @include for-medium-screen {
