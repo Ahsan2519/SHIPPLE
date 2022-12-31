@@ -214,13 +214,13 @@ header .navber {
     height: 100vh;
     position: inherit;
     z-index: 5;
-    top: 0;
-    right: 100%;
+    top: -1000%;
+    right: 0;
     background-color: #9099AA;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.8s ease-in-out;
   }
   header .navber.active {
-    right: 0;
+    top: 0;
   }
 }
 header .wrapper {
@@ -808,9 +808,34 @@ header .down::before {
   line-height: 1.4;
   text-align: center;
 }
+.contact .my-form {
+  position: relative;
+}
+.contact .send-msg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 600;
+}
 .contact .input-group {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.contact .input-group.fail .input {
+  border-color: #f01a07;
+}
+.contact .input-group.succes .input {
+  border-color: #70bb70;
+}
+.contact .error {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-size: 12px;
+  color: #f01a07;
 }
 .contact .input {
   padding: 6px 3.7%;
@@ -1136,13 +1161,15 @@ footer .footer-bottom .gallery-item {
   flex-basis: 30%;
   margin: 0 3% 8px 0;
 }
+footer .footer-bottom .gallery-item:hover {
+  opacity: 0.7;
+}
 footer .footer-bottom .image-link {
+  height: 100%;
   transition: all 0.3s ease-in-out;
 }
-@media (min-width: 995px) {
-  footer .footer-bottom .image-link:hover {
-    opacity: 0.7;
-  }
+footer .footer-bottom .image-link img {
+  height: 100%;
 }
 @media (max-width: 995px) {
   footer .footer-bottom .image-link {
@@ -1187,6 +1214,102 @@ footer .copy-right .design {
 @media (min-width: 995px) {
   footer .copy-right .design:hover {
     color: #FFB900;
+  }
+}
+footer .modal {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: rgba(34, 34, 34, 0.9411764706);
+  color: #fff;
+}
+footer .modal-close {
+  position: absolute;
+  top: -23px;
+  right: -10%;
+  cursor: pointer;
+}
+@media (min-width: 995px) {
+  footer .modal-close:hover {
+    -webkit-animation: rotate 0.8s ease-in-out;
+    animation: rotate 0.8s ease-in-out;
+  }
+}
+@media (max-width: 768px) {
+  footer .modal-close {
+    top: -30px;
+    right: -15%;
+  }
+}
+footer .modal-bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  display: block;
+  background-color: #fff;
+  text-indent: -9999px;
+  transition: all 0.3s ease-in-out;
+}
+footer .modal-content {
+  width: 50%;
+  position: relative;
+  -webkit-animation: fedintop 0.8s ease-in-out;
+  animation: fedintop 0.8s ease-in-out;
+}
+@media (max-width: 768px) {
+  footer .modal-content {
+    width: 70%;
+  }
+}
+footer .hide {
+  display: none;
+}
+footer .rotate1 {
+  -webkit-transform: translateY(5px) rotate(45deg);
+  -ms-transform: translateY(5px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
+}
+footer .rotate2 {
+  -webkit-transform: translateY(-3px) rotate(-45deg);
+  -ms-transform: translateY(-3px) rotate(-45deg);
+  transform: translateY(-3px) rotate(-45deg);
+}
+@keyframes fedintop {
+  from {
+    -webkit-transform: translateY(-100%) rotate(360deg);
+    -ms-transform: translateY(-100%) rotate(360deg);
+    transform: translateY(-100%) rotate(360deg);
+  }
+  to {
+    -webkit-transform: translateY(0) rotate(0deg);
+    -ms-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
