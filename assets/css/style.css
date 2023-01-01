@@ -819,6 +819,11 @@ header .down::before {
   font-size: 14px;
   font-weight: 600;
 }
+@media (max-width: 480px) {
+  .contact .send-msg {
+    font-size: 11px;
+  }
+}
 .contact .input-group {
   width: 100%;
   margin-bottom: 15px;
