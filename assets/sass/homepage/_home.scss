@@ -497,6 +497,9 @@
     @include position(absolute, $top: -20%, $left: 0);
     color: #404040;
     @include font(14px, 600);
+    @include for-small-screen{
+      @include font(11px);
+    }
   }
 
   .input-group {
