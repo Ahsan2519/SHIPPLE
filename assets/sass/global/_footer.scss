@@ -275,7 +275,7 @@ footer {
 
     @include for-hover-only {
       &:hover {
-        @include animation(rotate, .8s, ease-in-out)
+        @include animation(rotate, 1s, ease-in-out)
       }
     }
 
@@ -297,7 +297,7 @@ footer {
   .modal-content {
     width: 50%;
     @include position(relative);
-    @include animation(fedintop, .8s, ease-in-out);
+    @include animation(fedintop, 2s, ease-in-out);
 
     @include for-mobile-screen {
       width: 70%;
@@ -318,11 +318,11 @@ footer {
 
   @keyframes fedintop {
     from {
-      @include transform(translateY(-100%) rotate(360deg))
+      @include transform(scale(0));
     }
 
     to {
-      @include transform(translateY(0)rotate(0deg))
+      @include transform(scale(1));
     }
   }
 
