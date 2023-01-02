@@ -498,7 +498,7 @@
     color: #404040;
     @include font(14px, 600);
     @include for-small-screen{
-      @include font(11px);
+      @include font(10px);
     }
   }
 
