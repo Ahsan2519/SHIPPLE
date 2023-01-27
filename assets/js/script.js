@@ -84,7 +84,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   validate(inputName, nameRegex, 4, 40);
   validate(email, emailRegex, 4, 40);
-  if (isvalid == true) {
+  let errorGet = document.querySelectorAll(".error");
+  console.log(errorGet);
+  if (isvalid == true && errorGet.length === 0) {
     const sendMsg = document.createElement("span");
     sendMsg.className = "send-msg";
     sendMsg.innerText = "Your message hasbeen sent succesfully..Thank you..!"
